@@ -4,7 +4,6 @@
  */
 package Modelo;
 
-
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Toolkit;
@@ -12,36 +11,35 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
-import javax.swing.event.AncestorListener;
 
-
-public class VentanaUpdate extends JFrame{
+public class VentanaCrear extends JFrame {
     
-    private JButton btnAct;
-    private JLabel jlTitulo;
+     private JButton btnCrearD; 
     
-    public PanelFondo jpFondoInicial;
+   public PanelFondo jpFondoInicial;
     
-    
-    //Método constructor
-    public VentanaUpdate(){
+     //Constructor
+    public void VentanaCrear(){
         iniciarComponentes();
-}
+    }
+    
+    
      private void iniciarComponentes(){
          //Configuración de la ventana
         setTitle("Supermercado Univalle");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(700,500);
         setLocationRelativeTo(null);
-        setVisible(false); 
+        //setVisible(true); 
         setResizable(false);
         
         Toolkit miPantalla = Toolkit.getDefaultToolkit();
-        
-        jlTitulo = new JLabel("Actualizar Datos",SwingConstants.CENTER );
-        jlTitulo.setBounds(150,40, 400,35);
-        jlTitulo.setForeground(Color.RED);
-        jlTitulo.setFont(new Font("Cambria Bold", Font.BOLD, 30)); 
+       
+        btnCrearD = new JButton("Crear");
+        btnCrearD.setFont(new Font("Arial", Font.BOLD, 15));
+        btnCrearD.setBounds(230,250, 110,35);
+        btnCrearD.setActionCommand("crear");
+       
         
         //Configuración del Encabezado
         jpFondoInicial = new PanelFondo("/modelo/fondo.jpg"); 
@@ -49,24 +47,18 @@ public class VentanaUpdate extends JFrame{
         jpFondoInicial.setLayout(null);
         add(jpFondoInicial);
         
-        btnAct = new JButton("Actualizar");
-        btnAct.setFont(new Font("Arial", Font.BOLD, 12));
-        btnAct.setBounds(290,360, 110,35);
-        btnAct.setActionCommand("create");
+         jpFondoInicial.add(btnCrearD);
         
-        
-        jpFondoInicial.add(btnAct);
-        jpFondoInicial.add(jlTitulo);
-        
-
      }   
 
-     public void iniciarVentanaUpdate(){
-             VentanaUpdate update = new VentanaUpdate(); 
-             update.setVisible(true);
+     public void iniciarVentanaCrear(){
+             VentanaCrear crear = new VentanaCrear(); 
+             crear.setVisible(true);
              dispose();
 
         }
 
 }
    
+    
+

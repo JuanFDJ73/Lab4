@@ -71,12 +71,6 @@ public final class VentanaInicial extends JFrame implements ActionListener{
         jlTitulo2.setForeground(Color.RED);
         jlTitulo2.setFont(new Font("Cambria Bold", Font.BOLD, 30)); 
         
-        /*//Jlabel donde preguntaré el nombre
-        jlNombre = new JLabel("Ingresa tu nombre",SwingConstants.CENTER );
-        jlNombre.setBounds(150,170, 400,35);
-        jlNombre.setForeground(Color.GRAY);
-        jlNombre.setFont(new Font("Agency FB", Font.BOLD, 30)); 
-        */
         
         //Boton para Crear producto/proveedor/cliente
         btnCrear = new JButton("Crear");
@@ -123,6 +117,9 @@ public final class VentanaInicial extends JFrame implements ActionListener{
         
     }
     
+  public void cerrarVentana(){
+        setVisible(false);
+    }
     
     //public void actionPerformed(ActionEvent evento){
     //        if(evento.getSource() == btnUpdate){

@@ -11,6 +11,7 @@ import java.awt.event.ActionListener;
 class ManejadorDeEventos implements ActionListener{
     
     VentanaUpdate nuevaVentanaUpdate = new VentanaUpdate();
+    VentanaCrear nuevaVentanaCrear = new VentanaCrear();
 
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -31,6 +32,7 @@ class ManejadorDeEventos implements ActionListener{
             }
             case "create" : { // Handle the create button click
                 System.out.println("Create button clicked");
+                nuevaVentanaCrear.iniciarVentanaCrear();
                 break;
             } 
             default : {
