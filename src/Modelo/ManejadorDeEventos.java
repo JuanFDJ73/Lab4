@@ -12,6 +12,8 @@ class ManejadorDeEventos implements ActionListener{
     
     VentanaUpdate nuevaVentanaUpdate = new VentanaUpdate();
     VentanaCrear nuevaVentanaCrear = new VentanaCrear();
+    VentanaEliminar nuevaVentanaEliminar = new VentanaEliminar();
+    VentanaLeer nuevaVentanaLeer = new VentanaLeer();
 
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -23,11 +25,13 @@ class ManejadorDeEventos implements ActionListener{
                 break;
             } 
             case "delete" : { // Handle the delete button click
+                nuevaVentanaEliminar.iniciarVentanaEliminar();
                 System.out.println("Delete button clicked");
                 break;
             } 
             case "read" : { // Handle the read button click
                 System.out.println("Read button clicked");
+                nuevaVentanaLeer.iniciarVentanaLeer();
                 break;
             }
             case "create" : { // Handle the create button click
