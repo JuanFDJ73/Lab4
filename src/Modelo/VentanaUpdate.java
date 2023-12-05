@@ -29,7 +29,7 @@ public class VentanaUpdate extends JFrame{
 }
      private void iniciarComponentes(){
          //Configuración de la ventana
-        setTitle("Supermercado Univalle");
+        setTitle("Actualizar Datos");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(700,500);
         setLocationRelativeTo(null);

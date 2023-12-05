@@ -26,7 +26,7 @@ public class VentanaLeer extends JFrame {
 }
      private void iniciarComponentes(){
          //Configuración de la ventana
-        setTitle("Crear Datos");
+        setTitle("Leer Datos");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(700,500);
         setLocationRelativeTo(null);

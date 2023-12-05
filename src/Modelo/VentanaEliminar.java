@@ -27,7 +27,7 @@ public class VentanaEliminar extends JFrame{
 }
      private void iniciarComponentes(){
          //Configuración de la ventana
-        setTitle("Crear Datos");
+        setTitle("Eliminar Datos");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(700,500);
         setLocationRelativeTo(null);
