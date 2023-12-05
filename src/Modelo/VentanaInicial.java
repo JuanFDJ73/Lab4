@@ -82,28 +82,25 @@ public final class VentanaInicial extends JFrame implements ActionListener{
         btnCrear = new JButton("Crear");
         btnCrear.setFont(new Font("Arial", Font.BOLD, 15));
         btnCrear.setBounds(230,250, 110,35);
+        btnCrear.setActionCommand("create");
         
        //Botón para actuzalizar producto/proveedor/cliente
         btnUpdate = new JButton("Actualizar");
         btnUpdate.setFont(new Font("Arial", Font.BOLD, 15)); 
         btnUpdate.setBounds(230,310, 110,35);
+        btnUpdate.setActionCommand("update");
         
         //Botón para leer producto/proveedor/cliente
         btnRead = new JButton("Leer");
         btnRead.setFont(new Font("Arial", Font.BOLD, 15)); 
         btnRead.setBounds(350,250, 110,35);
-        
+        btnRead.setActionCommand("read");     
+
         //Botón para eliminar producto/proveedor/cliente
         btnDelete = new JButton("Eliminar");
         btnDelete.setFont(new Font("Arial", Font.BOLD, 15)); 
         btnDelete.setBounds(350,310, 110,35);
-        
-       //Caja para ingresar nombre
-        txtNombre = new JTextField("");
-        txtNombre.setHorizontalAlignment(JTextField.CENTER);
-        txtNombre.setForeground(Color.gray);
-        txtNombre.setFont(new Font("Arial", Font.BOLD, 15)); 
-        txtNombre.setBounds(225,215,240, 25);
+        btnDelete.setActionCommand("delete");
         
         
         //Agrego todos mis componentes
@@ -118,29 +115,28 @@ public final class VentanaInicial extends JFrame implements ActionListener{
         
         
         ManejadorDeEventos manejadorEventos = new ManejadorDeEventos();
-        
-        btnUpdate.addActionListener(this);
-        btnCrear.addActionListener((ActionListener) manejadorEventos);
-        btnUpdate.addActionListener((ActionListener) manejadorEventos);
-        btnDelete.addActionListener((ActionListener) manejadorEventos);
-        btnRead.addActionListener((ActionListener) manejadorEventos);
+
+        btnCrear.addActionListener(manejadorEventos);
+        btnUpdate.addActionListener(manejadorEventos);
+        btnRead.addActionListener(manejadorEventos);
+        btnDelete.addActionListener(manejadorEventos);
         
     }
-    public void iniciarVentanaUpdate(){
-             VentanaUpdate update = new VentanaUpdate(); 
-             update.setVisible(true);
-             dispose();
-        }
     
-    public void actionPerformed(ActionEvent evento){
-            if(evento.getSource() == btnUpdate){
-System.out.print("Presionó update");
-                iniciarVentanaUpdate();
-            }
+    
+    //public void actionPerformed(ActionEvent evento){
+    //        if(evento.getSource() == btnUpdate){
+//System.out.print("Presionó update");
+//                iniciarVentanaUpdate();
+//            }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 
      
     
 
     } 
 
-}

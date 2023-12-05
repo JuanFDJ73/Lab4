@@ -7,7 +7,6 @@ package Controlador;
 import Modelo.VentanaInicial;
 
 
-
 public class Principal {
 
     public static void main(String[] args) {

@@ -26,7 +26,7 @@ import Modelo.VentanaInicial;
  *
  * @author w10
  */
-public class VentanaUpdate {
+public class VentanaUpdate extends JFrame{
     
     public PanelFondo jpFondoInicial;
     private JLabel jlNombre;
@@ -47,8 +47,9 @@ public class VentanaUpdate {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(700,500);
         setLocationRelativeTo(null);
-        setVisible(true); 
+        setVisible(false); 
         setResizable(false);
+        
         
         
         Toolkit miPantalla = Toolkit.getDefaultToolkit();
@@ -63,33 +64,11 @@ public class VentanaUpdate {
         
      }   
 
-    private void setTitle(String supermercado_Univalle) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    private void setDefaultCloseOperation(int EXIT_ON_CLOSE) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    private void setSize(int i, int i0) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    private void setLocationRelativeTo(Object object) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    void setVisible(boolean b) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    private void setResizable(boolean b) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    private void add(PanelFondo jpFondoInicial) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+     public void iniciarVentanaUpdate(){
+             VentanaUpdate update = new VentanaUpdate(); 
+             update.setVisible(true);
+             dispose();
+        }
 
 }
    
