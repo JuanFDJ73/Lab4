@@ -54,11 +54,9 @@ public class VentanaUpdate extends JFrame{
         btnAct.setBounds(290,360, 110,35);
         btnAct.setActionCommand("create");
         
-        
         jpFondoInicial.add(btnAct);
         jpFondoInicial.add(jlTitulo);
         
-
      }   
 
      public void iniciarVentanaUpdate(){

@@ -14,41 +14,46 @@ import javax.swing.SwingConstants;
 
 public class VentanaCrear extends JFrame {
     
-     private JButton btnCrearD; 
+        private JButton btnCreate;
+        private JLabel jlTituloWc;
     
-   public PanelFondo jpFondoInicial;
+    public PanelFondo jpFondoInicial;
     
-     //Constructor
-    public void VentanaCrear(){
+    
+    //Método constructor
+    public VentanaCrear(){
         iniciarComponentes();
-    }
-    
-    
+}
      private void iniciarComponentes(){
          //Configuración de la ventana
-        setTitle("Supermercado Univalle");
+        setTitle("Crear Datos");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(700,500);
         setLocationRelativeTo(null);
-        //setVisible(true); 
+        setVisible(false); 
         setResizable(false);
         
         Toolkit miPantalla = Toolkit.getDefaultToolkit();
-       
-        btnCrearD = new JButton("Crear");
-        btnCrearD.setFont(new Font("Arial", Font.BOLD, 15));
-        btnCrearD.setBounds(230,250, 110,35);
-        btnCrearD.setActionCommand("crear");
-       
+        
+        jlTituloWc = new JLabel("Crear Datos",SwingConstants.CENTER );
+        jlTituloWc.setBounds(150,40, 400,35);
+        jlTituloWc.setForeground(Color.WHITE);
+        jlTituloWc.setFont(new Font("Cambria Bold", Font.BOLD, 30)); 
         
         //Configuración del Encabezado
-        jpFondoInicial = new PanelFondo("/modelo/fondo.jpg"); 
+        jpFondoInicial = new PanelFondo("/modelo/fondoRojo.jpg"); 
         jpFondoInicial.setSize(700,500);     
         jpFondoInicial.setLayout(null);
         add(jpFondoInicial);
         
-         jpFondoInicial.add(btnCrearD);
-        
+        btnCreate = new JButton("Crear");
+        btnCreate.setFont(new Font("Arial", Font.BOLD, 12));
+        btnCreate.setBounds(295,360, 110,35);
+        btnCreate.setActionCommand("create");
+         
+        jpFondoInicial.add(btnCreate);
+        jpFondoInicial.add(jlTituloWc);
+
      }   
 
      public void iniciarVentanaCrear(){
