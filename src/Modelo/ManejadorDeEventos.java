@@ -22,6 +22,7 @@ class ManejadorDeEventos implements ActionListener{
             case "update" : { // Handle the update button click 
                 System.out.println("Update button clicked");
                 nuevaVentanaUpdate.iniciarVentanaUpdate();
+                
                 break;
             } 
             case "delete" : { // Handle the delete button click

@@ -3,11 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/w10/Documents/NetBeansProjects/Lab4/src/Modelo/ManejadorDeEventos.java</file>
-            <file>file:/C:/Users/w10/Documents/NetBeansProjects/Lab4/src/Modelo/VentanaInicial.java</file>
-            <file>file:/C:/Users/w10/Documents/NetBeansProjects/Lab4/src/Controlador/Principal.java</file>
-            <file>file:/C:/Users/w10/Documents/NetBeansProjects/Lab4/src/Modelo/VentanaCrear.java</file>
-            <file>file:/C:/Users/w10/Documents/NetBeansProjects/Lab4/src/Modelo/VentanaUpdate.java</file>
+            <file>file:/C:/Users/Usuario/Documents/GitHub/Lab4/src/Modelo/VentanaEliminar.java</file>
+            <file>file:/C:/Users/Usuario/Documents/GitHub/Lab4/src/Modelos/Producto.java</file>
+            <file>file:/C:/Users/Usuario/Documents/GitHub/Lab4/src/Modelos/RegistroVenta.java</file>
+            <file>file:/C:/Users/Usuario/Documents/GitHub/Lab4/src/Controlador/Principal.java</file>
+            <file>file:/C:/Users/Usuario/Documents/GitHub/Lab4/src/Modelos/Proveedor.java</file>
+            <file>file:/C:/Users/Usuario/Documents/GitHub/Lab4/src/Modelos/RegistroCompra.java</file>
+            <file>file:/C:/Users/Usuario/Documents/GitHub/Lab4/src/Modelos/Cliente.java</file>
+            <file>file:/C:/Users/Usuario/Documents/GitHub/Lab4/src/Modelo/VentanaUpdate.java</file>
+            <file>file:/C:/Users/Usuario/Documents/GitHub/Lab4/src/Modelo/VentanaCrear.java</file>
+            <file>file:/C:/Users/Usuario/Documents/GitHub/Lab4/src/Modelo/VentanaInicial.java</file>
+            <file>file:/C:/Users/Usuario/Documents/GitHub/Lab4/src/Modelo/ManejadorDeEventos.java</file>
         </group>
     </open-files>
 </project-private>
