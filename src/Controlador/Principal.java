@@ -4,7 +4,7 @@
  */
 package Controlador;
 
-import Modelo.VentanaInicial;
+import Vista.VentanaInicial;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;

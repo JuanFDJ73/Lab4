@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Modelo;
+package Vista;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -12,21 +12,21 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 
-public class VentanaLeer extends JFrame {
+public class VentanaCrear extends JFrame {
     
-       private JButton btnRead;
-        private JLabel jlTituloWr;
+        private JButton btnCreate;
+        private JLabel jlTituloWc;
     
     public PanelFondo jpFondoInicial;
     
     
     //Método constructor
-    public VentanaLeer(){
+    public VentanaCrear(){
         iniciarComponentes();
 }
      private void iniciarComponentes(){
          //Configuración de la ventana
-        setTitle("Leer Datos");
+        setTitle("Crear Datos");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(700,500);
         setLocationRelativeTo(null);
@@ -35,10 +35,10 @@ public class VentanaLeer extends JFrame {
         
         Toolkit miPantalla = Toolkit.getDefaultToolkit();
         
-        jlTituloWr = new JLabel("Leer Datos",SwingConstants.CENTER );
-        jlTituloWr.setBounds(150,40, 400,35);
-        jlTituloWr.setForeground(Color.WHITE);
-        jlTituloWr.setFont(new Font("Cambria Bold", Font.BOLD, 30)); 
+        jlTituloWc = new JLabel("Crear Datos",SwingConstants.CENTER );
+        jlTituloWc.setBounds(150,40, 400,35);
+        jlTituloWc.setForeground(Color.WHITE);
+        jlTituloWc.setFont(new Font("Cambria Bold", Font.BOLD, 30)); 
         
         //Configuración del Encabezado
         jpFondoInicial = new PanelFondo("/modelo/fondoRojo.jpg"); 
@@ -46,19 +46,19 @@ public class VentanaLeer extends JFrame {
         jpFondoInicial.setLayout(null);
         add(jpFondoInicial);
         
-        btnRead = new JButton("Leer");
-        btnRead.setFont(new Font("Arial", Font.BOLD, 12));
-        btnRead.setBounds(295,360, 110,35);
-        btnRead.setActionCommand("read");
+        btnCreate = new JButton("Crear");
+        btnCreate.setFont(new Font("Arial", Font.BOLD, 12));
+        btnCreate.setBounds(295,360, 110,35);
+        btnCreate.setActionCommand("create");
          
-        jpFondoInicial.add(btnRead);
-        jpFondoInicial.add(jlTituloWr);
+        jpFondoInicial.add(btnCreate);
+        jpFondoInicial.add(jlTituloWc);
 
      }   
 
-     public void iniciarVentanaLeer(){
-             VentanaLeer leer = new VentanaLeer(); 
-             leer.setVisible(true);
+     public void iniciarVentanaCrear(){
+             VentanaCrear crear = new VentanaCrear(); 
+             crear.setVisible(true);
              dispose();
 
         }

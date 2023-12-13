@@ -2,8 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Modelo;
-
+package Vista;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -12,24 +11,23 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
-import javax.swing.event.AncestorListener;
 
 
-public class VentanaUpdate extends JFrame{
+public class VentanaEliminar extends JFrame{
     
-    private JButton btnAct;
-    private JLabel jlTitulo;
+       private JButton btnDelete;
+        private JLabel jlTituloWd;
     
     public PanelFondo jpFondoInicial;
     
     
     //Método constructor
-    public VentanaUpdate(){
+    public VentanaEliminar(){
         iniciarComponentes();
 }
      private void iniciarComponentes(){
          //Configuración de la ventana
-        setTitle("Actualizar Datos");
+        setTitle("Eliminar Datos");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(700,500);
         setLocationRelativeTo(null);
@@ -38,10 +36,10 @@ public class VentanaUpdate extends JFrame{
         
         Toolkit miPantalla = Toolkit.getDefaultToolkit();
         
-        jlTitulo = new JLabel("Actualizar Datos",SwingConstants.CENTER );
-        jlTitulo.setBounds(150,40, 400,35);
-        jlTitulo.setForeground(Color.RED);
-        jlTitulo.setFont(new Font("Cambria Bold", Font.BOLD, 30)); 
+        jlTituloWd = new JLabel("Eliminar Datos",SwingConstants.CENTER );
+        jlTituloWd.setBounds(150,40, 400,35);
+        jlTituloWd.setForeground(Color.RED);
+        jlTituloWd.setFont(new Font("Cambria Bold", Font.BOLD, 30)); 
         
         //Configuración del Encabezado
         jpFondoInicial = new PanelFondo("/modelo/fondo.jpg"); 
@@ -49,22 +47,24 @@ public class VentanaUpdate extends JFrame{
         jpFondoInicial.setLayout(null);
         add(jpFondoInicial);
         
-        btnAct = new JButton("Actualizar");
-        btnAct.setFont(new Font("Arial", Font.BOLD, 12));
-        btnAct.setBounds(290,360, 110,35);
-        btnAct.setActionCommand("create");
-        
-        jpFondoInicial.add(btnAct);
-        jpFondoInicial.add(jlTitulo);
-        
+        btnDelete = new JButton("Eliminar");
+        btnDelete.setFont(new Font("Arial", Font.BOLD, 12));
+        btnDelete.setBounds(295,360, 110,35);
+        btnDelete.setActionCommand("delete");
+         
+        jpFondoInicial.add(btnDelete);
+        jpFondoInicial.add(jlTituloWd);
+
      }   
 
-     public void iniciarVentanaUpdate(){
-             VentanaUpdate update = new VentanaUpdate(); 
-             update.setVisible(true);
+     public void iniciarVentanaEliminar(){
+             VentanaEliminar eliminar = new VentanaEliminar(); 
+             eliminar.setVisible(true);
              dispose();
 
         }
 
 }
    
+    
+
