@@ -2,18 +2,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Modelos;
+package Modelos.ModeloProveedor;
 
 /**
  *
  * @author Usuario
  */
-public class Proveedor {
+public class CrearProveedor {
     private String nombreProveedor;
     private String emailProveedor;
     private String RUT;
     
-    public Proveedor(String nombreProveedor, String emailProveedor, String RUT) {
+    public CrearProveedor(String nombreProveedor, String emailProveedor, String RUT) {
         this.nombreProveedor = nombreProveedor;
         this.emailProveedor = emailProveedor;
         this.RUT = RUT;

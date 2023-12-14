@@ -3,17 +3,19 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Usuario/Documents/GitHub/Lab4/src/Modelo/VentanaEliminar.java</file>
-            <file>file:/C:/Users/Usuario/Documents/GitHub/Lab4/src/Modelos/Producto.java</file>
-            <file>file:/C:/Users/Usuario/Documents/GitHub/Lab4/src/Modelos/RegistroVenta.java</file>
-            <file>file:/C:/Users/Usuario/Documents/GitHub/Lab4/src/Controlador/Principal.java</file>
-            <file>file:/C:/Users/Usuario/Documents/GitHub/Lab4/src/Modelos/Proveedor.java</file>
-            <file>file:/C:/Users/Usuario/Documents/GitHub/Lab4/src/Modelos/RegistroCompra.java</file>
-            <file>file:/C:/Users/Usuario/Documents/GitHub/Lab4/src/Modelos/Cliente.java</file>
-            <file>file:/C:/Users/Usuario/Documents/GitHub/Lab4/src/Modelo/VentanaUpdate.java</file>
-            <file>file:/C:/Users/Usuario/Documents/GitHub/Lab4/src/Modelo/VentanaCrear.java</file>
-            <file>file:/C:/Users/Usuario/Documents/GitHub/Lab4/src/Modelo/VentanaInicial.java</file>
-            <file>file:/C:/Users/Usuario/Documents/GitHub/Lab4/src/Modelo/ManejadorDeEventos.java</file>
+            <file>file:/C:/Users/Usuario/Documents/GitHub/Lab4/src/Modelos/ModeloCliente/ActualizarCliente.java</file>
+            <file>file:/C:/Users/Usuario/Documents/GitHub/Lab4/src/Modelos/ModeloProducto/ActualizarProducto.java</file>
+            <file>file:/C:/Users/Usuario/Documents/GitHub/Lab4/src/Modelos/ModeloProducto/LectorProductos.java</file>
+            <file>file:/C:/Users/Usuario/Documents/GitHub/Lab4/src/Modelos/ModeloCliente/EliminarCliente.java</file>
+            <file>file:/C:/Users/Usuario/Documents/GitHub/Lab4/src/Modelos/ModeloProveedor/CrearProveedor.java</file>
+            <file>file:/C:/Users/Usuario/Documents/GitHub/Lab4/src/Modelos/ModeloProducto/CrearProducto.java</file>
+            <file>file:/C:/Users/Usuario/Documents/GitHub/Lab4/src/Modelos/ModeloProducto/EliminarProducto.java</file>
+            <file>file:/C:/Users/Usuario/Documents/GitHub/Lab4/src/Modelos/ModeloProveedor/ActualizarProveedor.java</file>
+            <file>file:/C:/Users/Usuario/Documents/GitHub/Lab4/src/Modelos/ModeloCompra/RegistroCompra.java</file>
+            <file>file:/C:/Users/Usuario/Documents/GitHub/Lab4/src/Modelos/ModeloProveedor/EliminarProveedor.java</file>
+            <file>file:/C:/Users/Usuario/Documents/GitHub/Lab4/src/Modelos/ModeloProveedor/LectorProveedor.java</file>
+            <file>file:/C:/Users/Usuario/Documents/GitHub/Lab4/src/Modelos/ModeloCliente/LectorClientes.java</file>
+            <file>file:/C:/Users/Usuario/Documents/GitHub/Lab4/src/Modelos/ModeloCliente/CrearCliente.java</file>
         </group>
     </open-files>
 </project-private>

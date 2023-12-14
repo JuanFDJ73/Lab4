@@ -2,8 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Modelos;
+package Modelos.ModeloCompra;
 
+import Modelos.ModeloProducto.Producto;
+import Modelos.ModeloProveedor.CrearProveedor;
 import java.io.Serializable;
 import java.util.ArrayList;
 
@@ -14,11 +16,11 @@ import java.util.ArrayList;
 public class RegistroCompra implements Serializable {
     public static final long serialVersionUID = 1L;
     private int numero;
-    private Proveedor proveedor;
+    private CrearProveedor proveedor;
     private ArrayList<Producto> listaCompra;
     private double totalPagar;
     
-    public RegistroCompra(int numero, double totalPagar, Proveedor proveedor){
+    public RegistroCompra(int numero, double totalPagar, CrearProveedor proveedor){
         this.numero = numero;
         this.totalPagar = totalPagar;
         this.proveedor = proveedor;
@@ -30,14 +32,14 @@ public class RegistroCompra implements Serializable {
     }
     
     
-    public Proveedor getProveedor() {
+    public CrearProveedor getProveedor() {
         return proveedor;
     }
 
     public double getTotalPagar(){
         return totalPagar;
     }
-    public void setCliente(Proveedor proveedor) {
+    public void setCliente(CrearProveedor proveedor) {
         this.proveedor = proveedor;
     }
 

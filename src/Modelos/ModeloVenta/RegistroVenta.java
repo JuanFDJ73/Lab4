@@ -2,8 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Modelos;
+package Modelos.ModeloVenta;
 
+import Modelos.ModeloProducto.Producto;
+import Modelos.ModeloCliente.CrearCliente;
 import java.util.ArrayList;
 import java.io.File;
 import java.io.IOException;
@@ -13,7 +15,6 @@ import java.util.StringTokenizer;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.DefaultListModel;
-import Modelos.*;
 
 /**
  *
@@ -22,11 +23,11 @@ import Modelos.*;
 public class RegistroVenta implements Serializable {
     public static final long serialVersionUID = 1L;
     private int numero;
-    private Cliente cliente;
+    private CrearCliente cliente;
     private ArrayList<Producto> listaVenta;
     private double totalPagar;
     
-    public RegistroVenta(int numero, double totalPagar, Cliente cliente){
+    public RegistroVenta(int numero, double totalPagar, CrearCliente cliente){
         this.numero = numero;
         this.totalPagar = totalPagar;
         this.cliente = cliente;
@@ -38,14 +39,14 @@ public class RegistroVenta implements Serializable {
     }
     
     
-    public Cliente getCliente() {
+    public CrearCliente getCliente() {
         return cliente;
     }
 
     public double getTotalPagar(){
         return totalPagar;
     }
-    public void setCliente(Cliente cliente) {
+    public void setCliente(CrearCliente cliente) {
         this.cliente = cliente;
     }
 
