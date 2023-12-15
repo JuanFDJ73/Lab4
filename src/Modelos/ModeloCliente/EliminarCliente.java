@@ -9,6 +9,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Iterator;
 import javax.swing.JOptionPane;
 
 /**
@@ -65,66 +66,55 @@ public class EliminarCliente {
     }
     
 
-    public boolean eliminarCliente(String id){
-        
-        try (BufferedReader br = new BufferedReader(new FileReader("src/archovos/archivoClientes"))) {
+    public boolean deleteDealer(String id) {
+        try (BufferedReader br = new BufferedReader(new FileReader("src/archivos/archivoClientes"))) {
 
-        String line;
-        ArrayList<String> clientList = new ArrayList<>();
+            String line;
+            ArrayList<String> dealerList = new ArrayList<>();
 
-        // Lee el archivo y almacena cada línea en el ArrayList
-        while ((line = br.readLine()) != null) {
-            clientList.add(line);
-        }
+            // Lee el archivo y almacena cada línea en el ArrayList
+            while ((line = br.readLine()) != null) {
+                dealerList.add(line);
+            }
 
-        // Busca la cédula en el ArrayList
-        for (int i = 0; i < clientList.size(); i++) {
-            
-            String clientData = clientList.get(i);
-            String[] dataArray = clientData
-                    .replaceAll("[\\[\\]]", "") // Elimina corchetes "[" y "]"
-                    .split(", "); // Suponiendo que los datos están separados por ", "
+            // Usar un iterador para recorrer la lista y eliminar elementos de manera segura
+            Iterator<String> iterator = dealerList.iterator();
+            while (iterator.hasNext()) {
+                String dealerData = iterator.next();
+                String[] dataArray = dealerData
+                        .replaceAll("[\\[\\]]", "") // Elimina corchetes "[" y "]"
+                        .split(", "); // Suponiendo que los datos están separados por ", "
 
                 for (String data : dataArray) {
                     String[] keyValue = data.split(": ");
-                    if (keyValue[0].trim().equals("Identificación") && keyValue[1].trim().equals(id)) {
-                        // Elimina el cliente del ArrayList
-                        clientList.remove(i);
+                    if (keyValue[1].trim().equals(id)) {
+                        // Elimina el proveedor usando el iterador
+                        int result = JOptionPane.showConfirmDialog(null, "Se eliminaran los datos del cliente, ¿Está de acuerdo?", "Confirmación", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+                        if(result == JOptionPane.YES_OPTION){
+                           iterator.remove(); 
+                        }else {
+                            break;
+                        }
 
                         // Escribe el ArrayList actualizado en el archivo de texto
-                        try (BufferedWriter writer = new BufferedWriter(new FileWriter("src/archivos/archivosClientes"))) {
-                            
-                            for (String updatedClient : clientList) {
-                                writer.write(updatedClient);
+                        try (BufferedWriter writer = new BufferedWriter(new FileWriter("src/main/java/textFiles/dealersData"))) {
+                            for (String updatedDealer : dealerList) {
+                                writer.write(updatedDealer);
                                 writer.newLine();
                             }
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
-
-                        System.out.println("Cliente eliminado:");
-                            for (String entry : dataArray) {
-                                
-                                System.out.println("Datos del cliente: " + entry);
-
-
-                            }
-                            
-                            this.nombreClienteEliminado = dataArray[0];
-                            this.apellidoClienteEliminado = dataArray[1];
-                            this.idClienteEliminado = dataArray[2];
-                            this.emailClienteEliminado = dataArray[3];
-
-                            return true; // Indica que se encontró la cédula y se eliminó el cliente
-                        }
+                        return true; // Indica que se encontró la cédula y se eliminó el proveedor
                     }
                 }
+            }
 
-                    JOptionPane.showMessageDialog(null, "Cliente no encontrado.");
-                    return false; // Indica que no se encontró la cédula
-        }catch (IOException e) {
+            JOptionPane.showMessageDialog(null, "Proveedor no encontrado.");
+            return false; // Indica que no se encontró la cédula
+        } catch (IOException e) {
             e.printStackTrace();
-        return false; // Manejo de excepciones
+            return false; // Manejo de excepciones
+        }
     }
-}
 }
