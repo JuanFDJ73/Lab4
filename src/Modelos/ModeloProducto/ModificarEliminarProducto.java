@@ -133,7 +133,7 @@ public class ModificarEliminarProducto {
         }
     }
     
-    public boolean eliminarCLiente(String idProducto) {
+    public boolean eliminarProducto(String idProducto) {
         try (BufferedReader br = new BufferedReader(new FileReader(rutaArchivoProductos))) {
 
             String line;
