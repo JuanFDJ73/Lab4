@@ -13,11 +13,14 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 import javax.swing.event.AncestorListener;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 
 public class VentanaUpdate extends JFrame{
     
-    private JButton btnAct;
+    private JButton btnPrueba1;
+    private JButton btnPrueba2;
     private JLabel jlTitulo;
     
     public PanelFondo jpFondoInicial;
@@ -26,8 +29,44 @@ public class VentanaUpdate extends JFrame{
     //Método constructor
     public VentanaUpdate(){
         iniciarComponentes();
-}
-     private void iniciarComponentes(){
+        agregarListeners();
+    }
+    
+    private void agregarListeners() {
+        btnPrueba1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Aquí creas una instancia de la nueva clase a la que quieres dirigirte
+                VentanaUpdate1 nuevaVentana = new VentanaUpdate1();
+
+                // Haces visible la nueva ventana
+                nuevaVentana.setVisible(true);
+
+                // Cierras la ventana actual
+                dispose();
+            }
+        });
+        
+        btnPrueba2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Aquí creas una instancia de la nueva clase a la que quieres dirigirte
+                VentanaUpdate1 nuevaVentana = new VentanaUpdate1();
+
+                // Haces visible la nueva ventana
+                nuevaVentana.setVisible(true);
+
+                // Cierras la ventana actual
+                dispose();
+            }
+        });
+        
+    }
+    
+    
+    
+    
+    private void iniciarComponentes(){
          //Configuración de la ventana
         setTitle("Actualizar Datos");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -49,12 +88,18 @@ public class VentanaUpdate extends JFrame{
         jpFondoInicial.setLayout(null);
         add(jpFondoInicial);
         
-        btnAct = new JButton("Actualizar");
-        btnAct.setFont(new Font("Arial", Font.BOLD, 12));
-        btnAct.setBounds(290,360, 110,35);
-        btnAct.setActionCommand("create");
+        btnPrueba1 = new JButton("Boton1");
+        btnPrueba1.setFont(new Font("Arial", Font.BOLD, 12));
+        btnPrueba1.setBounds(205,360, 110,35);
+        btnPrueba1.setActionCommand("Prueba1");
         
-        jpFondoInicial.add(btnAct);
+        btnPrueba2 = new JButton("Boton2");
+        btnPrueba2.setFont(new Font("Arial", Font.BOLD, 12));
+        btnPrueba2.setBounds(385,360, 110,35);
+        btnPrueba2.setActionCommand("Prueba2");
+         
+        jpFondoInicial.add(btnPrueba1);
+        jpFondoInicial.add(btnPrueba2);
         jpFondoInicial.add(jlTitulo);
         
      }   

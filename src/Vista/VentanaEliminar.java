@@ -1,12 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package Vista;
 
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -15,8 +14,9 @@ import javax.swing.SwingConstants;
 
 public class VentanaEliminar extends JFrame{
     
-       private JButton btnDelete;
-        private JLabel jlTituloWd;
+       private JButton btnPrueba1;
+       private JButton btnPrueba2;
+       private JLabel jlTituloWd;
     
     public PanelFondo jpFondoInicial;
     
@@ -24,8 +24,42 @@ public class VentanaEliminar extends JFrame{
     //Método constructor
     public VentanaEliminar(){
         iniciarComponentes();
-}
-     private void iniciarComponentes(){
+        agregarListeners();
+    }
+    
+    private void agregarListeners() {
+        btnPrueba1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Aquí creas una instancia de la nueva clase a la que quieres dirigirte
+                VentanaEliminar1 nuevaVentana = new VentanaEliminar1();
+
+                // Haces visible la nueva ventana
+                nuevaVentana.setVisible(true);
+
+                // Cierras la ventana actual
+                dispose();
+            }
+        });
+        
+        btnPrueba2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Aquí creas una instancia de la nueva clase a la que quieres dirigirte
+                VentanaEliminar2 nuevaVentana = new VentanaEliminar2();
+
+                // Haces visible la nueva ventana
+                nuevaVentana.setVisible(true);
+
+                // Cierras la ventana actual
+                dispose();
+            }
+        });
+        
+    }
+    
+    
+    private void iniciarComponentes(){
          //Configuración de la ventana
         setTitle("Eliminar Datos");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -47,13 +81,20 @@ public class VentanaEliminar extends JFrame{
         jpFondoInicial.setLayout(null);
         add(jpFondoInicial);
         
-        btnDelete = new JButton("Eliminar");
-        btnDelete.setFont(new Font("Arial", Font.BOLD, 12));
-        btnDelete.setBounds(295,360, 110,35);
-        btnDelete.setActionCommand("delete");
+        btnPrueba1 = new JButton("Boton1");
+        btnPrueba1.setFont(new Font("Arial", Font.BOLD, 12));
+        btnPrueba1.setBounds(205,360, 110,35);
+        btnPrueba1.setActionCommand("Prueba1");
+        
+        btnPrueba2 = new JButton("Boton2");
+        btnPrueba2.setFont(new Font("Arial", Font.BOLD, 12));
+        btnPrueba2.setBounds(385,360, 110,35);
+        btnPrueba2.setActionCommand("Prueba2");
          
-        jpFondoInicial.add(btnDelete);
+        jpFondoInicial.add(btnPrueba1);
+        jpFondoInicial.add(btnPrueba2);
         jpFondoInicial.add(jlTituloWd);
+
 
      }   
 

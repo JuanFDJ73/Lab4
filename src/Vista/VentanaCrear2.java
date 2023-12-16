@@ -10,7 +10,7 @@ import javax.swing.SwingConstants;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class VentanaCrear extends JFrame {
+public class VentanaCrear2 extends JFrame {
     
         private JButton btnPrueba1;
         private JButton btnPrueba2;
@@ -20,45 +20,14 @@ public class VentanaCrear extends JFrame {
     
     
     //Método constructor
-    public VentanaCrear(){
+    public VentanaCrear2(){
         iniciarComponentes();
-        agregarListeners();
     }
     
-    private void agregarListeners() {
-        btnPrueba1.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                // Aquí creas una instancia de la nueva clase a la que quieres dirigirte
-                VentanaCrear1 nuevaVentana = new VentanaCrear1();
-
-                // Haces visible la nueva ventana
-                nuevaVentana.setVisible(true);
-
-                // Cierras la ventana actual
-                dispose();
-            }
-        });
-        
-        btnPrueba2.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                // Aquí creas una instancia de la nueva clase a la que quieres dirigirte
-                VentanaCrear2 nuevaVentana = new VentanaCrear2();
-
-                // Haces visible la nueva ventana
-                nuevaVentana.setVisible(true);
-
-                // Cierras la ventana actual
-                dispose();
-            }
-        });
-        
-    }
     
     private void iniciarComponentes(){
          //Configuración de la ventana
-        setTitle("Crear Datos");
+        setTitle("VentanaCrear2");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(700,500);
         setLocationRelativeTo(null);
@@ -67,7 +36,7 @@ public class VentanaCrear extends JFrame {
         
         Toolkit miPantalla = Toolkit.getDefaultToolkit();
         
-        jlTituloWc = new JLabel("Crear Datos",SwingConstants.CENTER );
+        jlTituloWc = new JLabel("VentanaCrear2",SwingConstants.CENTER );
         jlTituloWc.setBounds(150,40, 400,35);
         jlTituloWc.setForeground(Color.WHITE);
         jlTituloWc.setFont(new Font("Cambria Bold", Font.BOLD, 30)); 
