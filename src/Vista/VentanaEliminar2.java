@@ -18,8 +18,8 @@ public class VentanaEliminar2 extends JFrame {
         private JButton btnReturn;
         private JButton btnComplete;
         private JLabel jlTituloWc;
-        private JLabel labelCampo;
-        private JTextField campoTexto;
+        private JLabel labelCampoIdeliminar;
+        private JTextField campoTextoIdeliminar;
     
     public PanelFondo jpFondoInicial;
     
@@ -61,9 +61,19 @@ public class VentanaEliminar2 extends JFrame {
         btnComplete.setFont(new Font("Arial", Font.BOLD, 12));
         btnComplete.setBounds(385,360, 110,35);
         btnComplete.setActionCommand("Prueba2");
+       
         
-        // Agregar etiqueta y campo de texto
-        agregarLabelYCampoTexto("IdEliminar");
+        labelCampoIdeliminar = new JLabel("Ideliminar:");
+        labelCampoIdeliminar.setFont(new Font("Arial", Font.PLAIN, 12));
+        labelCampoIdeliminar.setBounds(100, 100, 80, 25);
+        campoTextoIdeliminar = new JTextField();
+        campoTextoIdeliminar.setBounds(200, 100, 150, 25);
+
+        jpFondoInicial.add(labelCampoIdeliminar);
+        jpFondoInicial.add(labelCampoIdeliminar);
+        
+        
+        
          
         jpFondoInicial.add(btnReturn);
         jpFondoInicial.add(btnComplete);
@@ -71,17 +81,7 @@ public class VentanaEliminar2 extends JFrame {
 
     }   
 
-    
-    private void agregarLabelYCampoTexto(String nombreCampo) {
-        labelCampo = new JLabel(nombreCampo + ":");
-        labelCampo.setFont(new Font("Arial", Font.PLAIN, 12));
-        labelCampo.setBounds(100, 100, 80, 25);
-        campoTexto = new JTextField();
-        campoTexto.setBounds(200, 100, 150, 25);
-
-        jpFondoInicial.add(labelCampo);
-        jpFondoInicial.add(campoTexto);
-    }
+   
     
     
     public void iniciarVentanaCrear(){

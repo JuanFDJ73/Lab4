@@ -20,6 +20,14 @@ public class VentanaCrear1 extends JFrame {
         private JButton btnComplete;
         private JLabel jlTituloWc;
         private JTextField[] camposTexto;
+        private JLabel labelCampoNombre;
+        private JTextField campoTextoNombre;
+        private JLabel labelCampoApellido;
+        private JTextField campoTextoApellido;
+        private JLabel labelCampoID;
+        private JTextField campoTextoID;
+        private JLabel labelCampoEmail;
+        private JTextField campoTextoEmail;
     
     public PanelFondo jpFondoInicial;
     
@@ -59,11 +67,43 @@ public class VentanaCrear1 extends JFrame {
         btnComplete.setFont(new Font("Arial", Font.BOLD, 12));
         btnComplete.setBounds(385,360, 110,35);
         btnComplete.setActionCommand("Prueba2");
-         
-        // Agregar etiquetas y campos de texto
-        String[] nombresCampos = {"Nombre", "Apellido", "ID", "Email"};
-        agregarLabelsYCamposTexto(nombresCampos);
+
         
+        labelCampoNombre = new JLabel("Nombre:");
+        labelCampoNombre.setFont(new Font("Arial", Font.PLAIN, 12));
+        labelCampoNombre.setBounds(100, 40, 80, 25);
+        campoTextoNombre = new JTextField();
+        campoTextoNombre.setBounds(200, 40, 150, 25);
+
+        jpFondoInicial.add(labelCampoNombre);
+        jpFondoInicial.add(campoTextoNombre);
+        
+        labelCampoApellido = new JLabel("Apellido:");
+        labelCampoApellido.setFont(new Font("Arial", Font.PLAIN, 12));
+        labelCampoApellido.setBounds(100, 80, 80, 25);
+        campoTextoApellido = new JTextField();
+        campoTextoApellido.setBounds(200, 80, 150, 25);
+
+        jpFondoInicial.add(labelCampoApellido);
+        jpFondoInicial.add(campoTextoApellido);
+        
+        labelCampoID = new JLabel("ID:");
+        labelCampoID.setFont(new Font("Arial", Font.PLAIN, 12));
+        labelCampoID.setBounds(100, 120, 80, 25);
+        campoTextoID = new JTextField();
+        campoTextoID.setBounds(200, 120, 150, 25);
+
+        jpFondoInicial.add(labelCampoID);
+        jpFondoInicial.add(campoTextoID);
+        
+        labelCampoEmail = new JLabel("Email:");
+        labelCampoEmail.setFont(new Font("Arial", Font.PLAIN, 12));
+        labelCampoEmail.setBounds(100, 160, 80, 25);
+        campoTextoEmail = new JTextField();
+        campoTextoEmail.setBounds(200, 160, 150, 25);
+
+        jpFondoInicial.add(labelCampoEmail);
+        jpFondoInicial.add(campoTextoEmail);
         
         jpFondoInicial.add(btnReturn);
         jpFondoInicial.add(btnComplete);
@@ -73,22 +113,6 @@ public class VentanaCrear1 extends JFrame {
 
      
      
-    private void agregarLabelsYCamposTexto(String[] nombresCampos) {
-        int numCampos = nombresCampos.length;
-        JLabel[] labels = new JLabel[numCampos];
-        camposTexto = new JTextField[numCampos];
-
-        for (int i = 0; i < numCampos; i++) {
-            labels[i] = new JLabel(nombresCampos[i] + ":");
-            labels[i].setFont(new Font("Arial", Font.PLAIN, 12));
-            labels[i].setBounds(100, 100 + i * 40, 80, 25);
-            camposTexto[i] = new JTextField();
-            camposTexto[i].setBounds(200, 100 + i * 40, 150, 25);
-
-            jpFondoInicial.add(labels[i]);
-            jpFondoInicial.add(camposTexto[i]);
-        }
-    }
      
     
      
