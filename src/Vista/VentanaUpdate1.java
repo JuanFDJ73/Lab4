@@ -9,12 +9,14 @@ import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JTextField;
 
 public class VentanaUpdate1 extends JFrame {
     
-        private JButton btnPrueba1;
-        private JButton btnPrueba2;
+        private JButton btnReturn;
+        private JButton btnComplete;
         private JLabel jlTituloWc;
+        private JTextField[] camposTexto;
     
     public PanelFondo jpFondoInicial;
     
@@ -47,23 +49,47 @@ public class VentanaUpdate1 extends JFrame {
         jpFondoInicial.setLayout(null);
         add(jpFondoInicial);
         
-        btnPrueba1 = new JButton("Boton1");
-        btnPrueba1.setFont(new Font("Arial", Font.BOLD, 12));
-        btnPrueba1.setBounds(205,360, 110,35);
-        btnPrueba1.setActionCommand("Prueba1");
+        btnReturn = new JButton("Return");
+        btnReturn.setFont(new Font("Arial", Font.BOLD, 12));
+        btnReturn.setBounds(205,360, 110,35);
+        btnReturn.setActionCommand("Prueba1");
         
-        btnPrueba2 = new JButton("Boton2");
-        btnPrueba2.setFont(new Font("Arial", Font.BOLD, 12));
-        btnPrueba2.setBounds(385,360, 110,35);
-        btnPrueba2.setActionCommand("Prueba2");
+        btnComplete = new JButton("Complete");
+        btnComplete.setFont(new Font("Arial", Font.BOLD, 12));
+        btnComplete.setBounds(385,360, 110,35);
+        btnComplete.setActionCommand("Prueba2");
          
-        jpFondoInicial.add(btnPrueba1);
-        jpFondoInicial.add(btnPrueba2);
+        
+        // Agregar etiquetas y campos de texto
+        String[] nombresCampos = {"Nombre", "Apellido", "ID", "Email"};
+        agregarLabelsYCamposTexto(nombresCampos);
+        
+        jpFondoInicial.add(btnReturn);
+        jpFondoInicial.add(btnComplete);
         jpFondoInicial.add(jlTituloWc);
 
-     }   
+    }   
 
-     public void iniciarVentanaCrear(){
+   
+    private void agregarLabelsYCamposTexto(String[] nombresCampos) {
+        int numCampos = nombresCampos.length;
+        JLabel[] labels = new JLabel[numCampos];
+        camposTexto = new JTextField[numCampos];
+
+        for (int i = 0; i < numCampos; i++) {
+            labels[i] = new JLabel(nombresCampos[i] + ":");
+            labels[i].setFont(new Font("Arial", Font.PLAIN, 12));
+            labels[i].setBounds(100, 100 + i * 40, 80, 25);
+            camposTexto[i] = new JTextField();
+            camposTexto[i].setBounds(200, 100 + i * 40, 150, 25);
+
+            jpFondoInicial.add(labels[i]);
+            jpFondoInicial.add(camposTexto[i]);
+        }
+    }
+    
+    
+    public void iniciarVentanaCrear(){
              VentanaCrear crear = new VentanaCrear(); 
              crear.setVisible(true);
              dispose();
