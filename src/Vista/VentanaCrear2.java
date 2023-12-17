@@ -66,12 +66,7 @@ public class VentanaCrear2 extends JFrame {
         btnComplete.setFont(new Font("Arial", Font.BOLD, 12));
         btnComplete.setBounds(385,360, 110,35);
         btnComplete.setActionCommand("Prueba2");
-         
-        
-        
-        // Agregar etiquetas y campos de texto
-        String[] nombresCampos = {"NombreProveedor", "RUT", "emailProveedor", "nombreProductoProveedor"};
-        agregarLabelsYCamposTexto(nombresCampos);
+              
         
         labelCampoNombreProveedor = new JLabel("NombreProveedor:");
         labelCampoNombreProveedor.setFont(new Font("Arial", Font.PLAIN, 12));
@@ -116,23 +111,6 @@ public class VentanaCrear2 extends JFrame {
 
     }   
 
-    private void agregarLabelsYCamposTexto(String[] nombresCampos) {
-        int numCampos = nombresCampos.length;
-        JLabel[] labels = new JLabel[numCampos];
-        camposTexto = new JTextField[numCampos];
-
-        for (int i = 0; i < numCampos; i++) {
-            labels[i] = new JLabel(nombresCampos[i] + ":");
-            labels[i].setFont(new Font("Arial", Font.PLAIN, 12));
-            labels[i].setBounds(100, 100 + i * 40, 80, 25);
-            camposTexto[i] = new JTextField();
-            camposTexto[i].setBounds(200, 100 + i * 40, 150, 25);
-
-            jpFondoInicial.add(labels[i]);
-            jpFondoInicial.add(camposTexto[i]);
-        }
-    }
-    
     
     
     public void iniciarVentanaCrear(){

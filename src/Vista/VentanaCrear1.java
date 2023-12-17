@@ -111,10 +111,7 @@ public class VentanaCrear1 extends JFrame {
 
     }   
 
-     
-     
-     
-    
+ 
      
      
     public void iniciarVentanaCrear(){
