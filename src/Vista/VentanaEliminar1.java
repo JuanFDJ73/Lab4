@@ -10,22 +10,24 @@ import java.awt.Toolkit;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
 public class VentanaEliminar1 extends JFrame {
     
-        private JButton btnPrueba1;
-        private JButton btnPrueba2;
-        private JLabel jlTituloWc;
-    
+    private JButton btnReturn;
+    private JButton btnComplete;
+    private JLabel jlTituloWc;
     public PanelFondo jpFondoInicial;
-    
+    private JLabel labelCampo;
+    private JTextField campoTexto;
     
     //Método constructor
     public VentanaEliminar1(){
         iniciarComponentes();
-}
-     private void iniciarComponentes(){
+    }
+    
+    private void iniciarComponentes(){
          //Configuración de la ventana
         setTitle("VentanaEliminar1");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -47,28 +49,43 @@ public class VentanaEliminar1 extends JFrame {
         jpFondoInicial.setLayout(null);
         add(jpFondoInicial);
         
-        btnPrueba1 = new JButton("Prueba1");
-        btnPrueba1.setFont(new Font("Arial", Font.BOLD, 12));
-        btnPrueba1.setBounds(205,360, 110,35);
-        btnPrueba1.setActionCommand("Prueba1");
+        btnReturn = new JButton("Return");
+        btnReturn.setFont(new Font("Arial", Font.BOLD, 12));
+        btnReturn.setBounds(205,360, 110,35);
+        btnReturn.setActionCommand("Prueba1");
         
-        btnPrueba2 = new JButton("Prueba2");
-        btnPrueba2.setFont(new Font("Arial", Font.BOLD, 12));
-        btnPrueba2.setBounds(385,360, 110,35);
-        btnPrueba2.setActionCommand("Prueba2");
+        btnComplete = new JButton("Complete");
+        btnComplete.setFont(new Font("Arial", Font.BOLD, 12));
+        btnComplete.setBounds(385,360, 110,35);
+        btnComplete.setActionCommand("Prueba2");
+        
+        
+        // Agregar etiqueta y campo de texto
+        agregarLabelYCampoTexto("RutEliminar");
          
-        jpFondoInicial.add(btnPrueba1);
-        jpFondoInicial.add(btnPrueba2);
+        jpFondoInicial.add(btnReturn);
+        jpFondoInicial.add(btnComplete);
         jpFondoInicial.add(jlTituloWc);
 
-     }   
+    }   
 
-     public void iniciarVentanaCrear(){
-             VentanaCrear crear = new VentanaCrear(); 
-             crear.setVisible(true);
-             dispose();
+    public void iniciarVentanaCrear(){
+        VentanaCrear crear = new VentanaCrear(); 
+        crear.setVisible(true);
+        dispose();
 
-        }
+    }
+     
+    private void agregarLabelYCampoTexto(String nombreCampo) {
+        labelCampo = new JLabel(nombreCampo + ":");
+        labelCampo.setFont(new Font("Arial", Font.PLAIN, 12));
+        labelCampo.setBounds(100, 100, 80, 25);
+        campoTexto = new JTextField();
+        campoTexto.setBounds(200, 100, 150, 25);
+
+        jpFondoInicial.add(labelCampo);
+        jpFondoInicial.add(campoTexto);
+    }
 
 }
    
